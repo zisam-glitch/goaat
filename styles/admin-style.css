@@ -1,0 +1,66 @@
+/* Style for Project Post Type Meta Boxes */
+#project_details_meta_box p,
+#project_images_meta_box p,
+#project_icon_meta_box p,
+#project_design_meta_box p,
+#project_scratch_meta_box p {
+    margin-bottom: 15px;
+}
+
+#project_details_meta_box label,
+#project_images_meta_box label,
+#project_icon_meta_box label,
+#project_design_meta_box label,
+#project_scratch_meta_box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#project_details_meta_box input[type="text"],
+#project_images_meta_box .project-image-id,
+#project_icon_meta_box #project_icon,
+#project_design_meta_box #project_design,
+#project_scratch_meta_box .project-scratch-id {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#project_images_wrapper p,
+#project_scratch_wrapper p {
+    position: relative;
+}
+
+#project_images_wrapper .remove-image-button,
+#project_scratch_wrapper .remove-scratch-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #dc3232;
+    color: #fff;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#project_images_wrapper .remove-image-button:hover,
+#project_scratch_wrapper .remove-scratch-button:hover {
+    background: #b22b2b;
+}
+
+button.button {
+    margin-top: 10px;
+}
+
+#project_icon_meta_box img,
+#project_design_meta_box img,
+#project_scratch_meta_box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+/* Style for Project Post Type Meta Boxes */

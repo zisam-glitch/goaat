@@ -1,0 +1,346 @@
+* {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font-face rules for Helvetica Neue Cyr  */
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("<?php echo get_template_directory_uri(); ?>/styles/fonts/HelveticaNeueMedium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("<?php echo get_template_directory_uri(); ?>/styles/fonts/HelveticaNeueUltraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
+} 
+
+
+/* Applying the custom font */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal; /* default to normal weight */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Helvetica Neue",  sans-serif;
+}
+strong {
+  font-weight: 500 !important;
+}
+h2 {
+  font-size: 28px !important;
+  color: #555555;
+  font-weight: 500 !important;
+}
+
+p {
+  font-size: 28px !important;
+  color: #555555;
+  font-weight: 200 !important;
+}
+
+.italic-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: italic;
+}
+
+.light-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.medium-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+.bold-text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+/* header start */
+
+.main-header {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-small .custom-logo-link .custom-logo {
+  width: 75px !important;
+  height: auto !important;
+}
+
+.logo-medium .custom-logo-link .custom-logo {
+  width: 100px !important;
+  height: auto !important;
+}
+.logo-large .custom-logo-link .custom-logo {
+  width: 125px !important;
+  height: auto !important;
+}
+
+.hamburgerbutton {
+  width: 28px;
+  height: auto;
+  margin: 15px 0px 15px 15px !important;
+  z-index: 1000; /* Ensure it stays on top */
+  position: relative; /* Adjust as necessary for natural positioning */
+}
+
+.drawer {
+  position: absolute;
+}
+
+
+.drawer__header {
+  padding: 50px 45px;
+}
+
+.drawer__close {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("https://res.cloudinary.com/db1i46uiv/image/upload/v1716114722/Component_3_lltgkc.png");
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.drawer__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 521px;
+  z-index: 9999;
+  overflow: auto;
+  transition: transform 0.8s cubic-bezier(0.2, 0, 0.38, 0.9);
+  will-change: transform;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  -webkit-transform: translate3d(103%, 0, 0);
+  transform: translate3d(103%, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  opacity: 0.9;
+}
+
+.drawer__content {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  flex-grow: 1;
+  padding: 30px 55px;
+  text-align: right;
+}
+
+.drawer.is-active {
+  display: block;
+}
+
+.drawer.is-visible .drawer__wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.drawer.is-visible .drawer__overlay {
+  opacity: 0.5;
+}
+
+.main-navigation{
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.main-navigation ul{
+  list-style: none;
+}
+.main-navigation ul li a{
+  text-decoration: none;
+}
+
+.sub-menu li{
+  font-weight: 200;
+}
+
+.sub-menu {
+  padding-top: 28px;
+}
+.sub-menu li ul{
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+.badge{
+  width: 72px;
+  height: auto;
+  padding-top: 30%;
+}
+/* header end */
+
+/* Lodding start */
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  width: auto;
+  max-height: calc(100vh - 135px);
+  overflow: hidden;
+}
+
+/* Lodding end */
+
+/* page start */
+
+.main-page {
+  padding: 10px 50px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.content p {
+  padding: 35px 0;
+  text-align: justify;
+  font-weight: 200 !important;
+}
+
+
+/* Contact start */
+.has-text-align-right {
+  text-align: right !important;
+}
+/* Contact end */
+
+/* project */
+
+.container {
+  padding: 25px 50px;
+}
+
+.entry-header{
+  display: grid;
+  grid-template-columns: 70% 27%;
+  gap: 3%;
+  padding-bottom: 20px;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.entry-title {
+  font-size: 32px  !important;
+  font-weight: 500;
+  color: #555555;
+}
+
+.project-location{
+  font-size: 20px !important;
+  font-weight: 200;
+  color: #555555;
+}
+
+.project-content p{
+  font-size: 20px !important;
+  text-align: justify;
+  line-height: 1.3;
+  padding-top: 20px;
+}
+
+.project-meta{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-meta ul {
+  list-style: none;
+  font-size: 20px;
+  color: #555555;
+  font-weight: 200;
+}
+
+
+.project-images{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-images img{
+  width: 100%;
+  height: auto;
+}
+
+.project-design{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.project-design img{
+  width: 70% !important;
+  height: auto;
+  
+}
+
+.project-scratch{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-scratch img{
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* footer */
+.site{
+  font-size: 16px !important;
+  font-weight: 200!important;
+  text-align: center;
+  padding-bottom: 70px;
+  padding-top: 400px;
+}
+
+.site span{
+  text-transform: uppercase;
+}
+
